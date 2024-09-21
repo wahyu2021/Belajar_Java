@@ -3,8 +3,7 @@ public class AppShape {
         Shape shape = new Shape();
         System.out.println(shape.getCorner());
 
-        Rectangle rectangle = new Rectangle();
-        System.out.println(rectangle.getCorner());
-        System.out.println(rectangle.parentCorner());
+        shape = new Rectangle();
+        System.out.println(shape.getCorner());
     }
 }

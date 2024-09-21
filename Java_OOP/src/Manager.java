@@ -1,13 +1,22 @@
-class Manager {
+class Employe{
     protected String name;
 
-    Manager(String name){
+    Employe(String name){
         this.name = name;
     }
 
-    Manager(){
-        this(null);
+    public void sayHello(){
+        System.out.println("Hai nama saya " + this.name + ", saya adalah seorang employe");
     }
+
+}
+
+class Manager extends Employe{
+
+    Manager(String name){
+        super(name);
+    }
+
 
     public void sayHello(){
         System.out.println("Hai nama saya " + this.name + ", saya adalah seorang manager");
@@ -16,7 +25,7 @@ class Manager {
 
 class VicePresident extends Manager{
     VicePresident(String name){
-        this.name = name;
+        super(name);
     }
 
     public void sayHello(){
