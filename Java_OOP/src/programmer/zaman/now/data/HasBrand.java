@@ -1,4 +1,5 @@
 package programmer.zaman.now.data;
 
-public interface HasBrands {
+public interface HasBrand {
+    String getBrand();
 }
