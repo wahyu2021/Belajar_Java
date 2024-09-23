@@ -14,6 +14,16 @@ public class Avanza implements Car{
         return this.brand;
     }
 
+    @Override
+    public boolean isMaintanse() {
+        return false;
+    }
+
+    @Override
+    public int getTier() {
+        return 0;
+    }
+
     public String getDriver() {
         return driver;
     }

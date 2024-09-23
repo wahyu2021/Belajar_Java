@@ -1,5 +1,11 @@
 package programmer.zaman.now.data;
 
-public interface Car extends HasBrand{
+public interface Car extends HasBrand, IsMaintance{
     void drive();
+
+    int getTier();
+
+    default boolean isBig(){
+        return false;
+    }
 }

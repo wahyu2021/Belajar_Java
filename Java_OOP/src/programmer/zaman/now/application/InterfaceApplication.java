@@ -7,6 +7,7 @@ public class InterfaceApplication{
         Avanza avanza = new Avanza();
         avanza.setBrand("Avanza");
         avanza.setDriver("Andinn");
+        System.out.println(avanza.isMaintanse());
 
         avanza.drive();
     }
