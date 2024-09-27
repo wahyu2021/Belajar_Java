@@ -1,5 +1,7 @@
 package programmer.zaman.now.data;
 
+import java.util.Objects;
+
 public class Product {
     private String name;
     private int price;
@@ -17,18 +19,24 @@ public class Product {
         return name;
     }
 
+    @Override
     public String toString(){
         return "Product name: " + getName() + "\nPrice: " + getPrice();
     }
 
+
     @Override
-    public boolean equals(Object obj) {
-        if(this == obj) return true;
-        if(!(obj instanceof Product)) return false;
+    public final boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product product)) return false;
 
-        Product product = (Product) obj;
+        return price == product.price && Objects.equals(name, product.name);
+    }
 
-        if(price != product.price) return false;
-        return name != null ? name.equals(product.name) : product.name == null;
+    @Override
+    public final int hashCode() {
+        int result = Objects.hashCode(name);
+        result = 31 * result + price;
+        return result;
     }
 }

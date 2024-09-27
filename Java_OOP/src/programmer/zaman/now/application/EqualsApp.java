@@ -7,7 +7,8 @@ public class EqualsApp {
 
         String second = "Wahyu Wahid";
 
-        System.out.println(first == second);
         System.out.println(first.equals(second));
+        System.out.println(first.hashCode());
+        System.out.println(second.hashCode());
     }
 }
